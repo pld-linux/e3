@@ -30,8 +30,8 @@ designed to be INDEPENDENT OF LIBC OR ANY OTHER library.
 %description -l pl
 e3 jest mikroskopijnym wrêcz edytorem tekstu, jego rozmiar nie
 przekracza 10000 bajtów. Wspiera on wszystkie podstawowe funkcje,
-jakich mo¿na oczekiwaæ od edytora, z wyj±tkiem pod¶wietlania sk³adni i
-cofania dokonanych zmian (undo). Jesli chcesz skorzystaæ z potêgi
+jakich mo¿na oczekiwaæ od edytora, z wyj±tkiem pod¶wietlania sk³adni 
+i cofania dokonanych zmian (undo). Je¶li chcesz skorzystaæ z potêgi
 wyra¿eñ regularnych, to e3 mo¿e wywo³aæ zewnêtrzny edytor strumieni
 ('sed' lub 'ex'). e3 potrafi emulowaæ ustawienia klawiszy Wordstara,
 EMACSA, Pico, Nedit oraz vi. e3 nie jest zale¿ny od ¿adnej biblioteki
