@@ -16,6 +16,7 @@ BuildRequires:	perl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		no_install_post_strip 1
+%define		_use_internal_dependency_generator 0
 
 %description
 e3 is a text micro editor with a code size less than 10000 bytes.
