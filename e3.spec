@@ -37,7 +37,7 @@ e3 for bootdisk.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin \
-	$RPM_BUILD_ROOT%{_bindir},%{_mandir}/man1}
+	$RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install e3 $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin
 install %{SOURCE1} $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin/editor.sh
