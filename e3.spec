@@ -52,7 +52,7 @@ perl -pi -e 's/^.*gzexe e3.*$//' Makefile
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}}  
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}}
 %ifarch %{ix86}
 install e3 $RPM_BUILD_ROOT%{_bindir}/e3
 %else
