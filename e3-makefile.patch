@@ -1,0 +1,11 @@
+--- Makefile.old	Wed Dec 20 21:56:20 2000
++++ Makefile	Wed Dec 20 21:56:28 2000
+@@ -35,7 +35,7 @@
+ ifeq	($(OS),LINUX)
+ 	nasm -f bin -l e3.lst -o e3 $(ASOURCES) -DCRIPLED_ELF=1 -D$(OS) -D$(EXMODE)
+ 	chmod +x e3
+-	upx -q -q -q -k -9 e3
++#	upx -q -q -q -k -9 e3
+ else
+ 	nasm $(AFLAGS) -o e3.o $(ASOURCES) -l e3.lst -D$(OS) -D$(EXMODE)
+ 	ld -s -o e3 e3.o
