@@ -12,7 +12,7 @@ URL:		http://www.sax.de/~adlibit/
 %ifarch %{ix86}
 BuildRequires:	nasm
 %endif
-BuildRequires:	perl
+BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		no_install_post_strip 1
