@@ -60,6 +60,7 @@ install -d $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin \
 	$RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install e3 $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin
+install e3 $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin/editor.sh
 install e3.man $RPM_BUILD_ROOT%{_mandir}/man1/e3.1
 
