@@ -9,6 +9,7 @@ Source0:	%{name}-%{version}.tar.gz
 Patch0:		%{name}-makefile.patch
 #URL:		
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+ExclusiveArch:	%{ix86}
 
 %description
 Small bootloader
