@@ -1,20 +1,20 @@
 Summary:	Tiny editor
 Summary(pl):	Mikroedytorek
 Name:		e3
-Version:	2.42
+Version:	2.43
 Release:	1
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
 Source1:	%{name}-editor.sh
 URL:		http://www.sax.de/~adlibit/
-BuildRequires:	perl
 %ifarch %{ix86}
 BuildRequires:	nasm
 %endif
+BuildRequires:	perl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define no_install_post_strip 1
+%define		no_install_post_strip 1
 
 %description
 e3 is a text micro editor with a code size less than 10000 bytes.
@@ -72,7 +72,6 @@ done
 for i in emacs vi pico ne ws; do
 	ln -sf e3-editor.sh $RPM_BUILD_ROOT%{_bindir}/e3-$i
 done
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
