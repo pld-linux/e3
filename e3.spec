@@ -2,7 +2,7 @@ Summary:	Tiny editor
 Summary(pl):	Mikroedytorek
 Name:		e3
 Version:	1.61
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Editors
 Group(de):	Applikationen/Editors
@@ -10,6 +10,7 @@ Group(pl):	Aplikacje/Edytory
 Group(pt):	Aplicações/Editores
 Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
 Source1:	%{name}-editor.sh
+Patch0:		%{name}-short_jump.patch
 URL:		http://www.sax.de/~adlibit/
 BuildRequires:	nasm
 ExclusiveArch:	%{ix86}
@@ -46,7 +47,8 @@ Group(pt):	Aplicações/Editores
 e3 for bootdisk.
 
 %prep
-%setup  -q
+%setup -q
+%patch0 -p1
 # gzexe makes problems
 # we gain 3K only
 perl -pi -e 's/^.*gzexe e3.*$//' Makefile

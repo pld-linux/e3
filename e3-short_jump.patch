@@ -1,0 +1,12 @@
+--- e3-1.61/e3.asm~	Sun Jun 10 19:59:15 2001
++++ e3-1.61/e3.asm	Fri Nov 30 18:15:02 2001
+@@ -1059,7 +1059,8 @@
+ DispShortLine:call LookPgBegin 		;go on 1st char upper left on screen
+ 	mov esi,edi			;esi for reading chars from text
+ 	mov ecx,[lines]
+-	jecxz Kviex
++	or ecx,ecx
++	jz Kviex
+ 	cld
+ 	mov bh,-1			;first line
+ DispNewLine:inc bh			;new line
