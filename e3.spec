@@ -1,7 +1,7 @@
 Summary:	Tiny editor
 Summary(pl):	Mikroedytorek
 Name:		e3
-Version:	2.33
+Version:	2.41
 Release:	1
 License:	GPL
 Group:		Applications/Editors
