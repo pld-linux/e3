@@ -1,22 +1,11 @@
---- e3-1.61/e3.asm	Sun Jun 10 19:59:15 2001
-+++ e3-1.61.new/e3.asm	Sat Jan 19 17:24:12 2002
-@@ -1105,12 +1105,13 @@
- ELZ3:	cmp al,NEWLINE
- 	jz FillLine
- 	cmp al,SPACECHAR
--	jae ELZ9			;simply ignore chars like carriage_return etc.
--	mov al,'.'
--ELZ9:	cmp al,7fh
--	jb ELZ7
+--- e3-1.61/e3.asm	Sun Jan 20 15:42:58 2002
++++ e3-1.61.new/e3.asm	Sun Jan 20 15:44:28 2002
+@@ -1110,7 +1110,7 @@
+ 	mov al,'.'
+ ELZ9:	cmp al,7fh
+ 	jb ELZ7
 -	cmp al,0AFh
--	ja ELZ7
-+	jae ELZ7
-+;	jae ELZ9			;simply ignore chars like carriage_return etc.
-+;	mov al,'.'
-+;ELZ9:	cmp al,7fh
-+;	jb ELZ7
-+;	cmp al,0AFh
-+;	ja ELZ7
++	cmp al,9fh
+ 	ja ELZ7
  	mov al,'.'
  ELZ7:	cmp bl,byte [columns]		;screen width
- 	jae DispEndLine			;continue reading line until end
