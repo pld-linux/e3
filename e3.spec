@@ -1,14 +1,14 @@
 Summary:	Tiny edytor
 Summary(pl):	Mikroedytorek
 Name:		e3
-Version:	1.3
+Version:	1.51
 Release:	1
 License:	GPL
 Group:		Applications/Editors
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
 Source1:	e3-editor.sh
 Patch0:		%{name}-makefile.patch
-#URL:		
+URL:		http://www.sax.de/~adlibit/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ExclusiveArch:	%{ix86}
 
