@@ -5,9 +5,6 @@ Version:	1.61
 Release:	5
 License:	GPL
 Group:		Applications/Editors
-Group(de):	Applikationen/Editors
-Group(pl):	Aplikacje/Edytory
-Group(pt):	Aplicações/Editores
 Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
 Source1:	%{name}-editor.sh
 Patch0:		%{name}-short_jump.patch
@@ -50,9 +47,6 @@ EMACSA, Pico, Nedit oraz vi. e3 nie jest zale¿ny od ¿adnej biblioteki
 Summary:	e3 for bootdisk
 Summary(pl):	e3 na bootkietkê
 Group:		Applications/Editors
-Group(de):	Applikationen/Editors
-Group(pl):	Aplikacje/Edytory
-Group(pt):	Aplicações/Editores
 
 %description embed
 e3 for bootdisk.
