@@ -14,6 +14,7 @@ URL:		http://www.sax.de/~adlibit/
 BuildRequires:	nasm
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+%define no_install_post_strip 1
 
 %description
 Tiny edytor.
