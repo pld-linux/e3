@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
 Source1:	e3-editor.sh
+BuildRequires:	nasm
 URL:		http://www.sax.de/~adlibit/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ExclusiveArch:	%{ix86}
