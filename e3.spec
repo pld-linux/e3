@@ -2,7 +2,7 @@ Summary:	Tiny editor
 Summary(pl):	Mikroedytorek
 Name:		e3
 Version:	1.61
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/Editors
 Group(de):	Applikationen/Editors
@@ -106,6 +106,7 @@ done
 
 for i in emacs vi pico ne ws; do
 	ln -sf editor.sh $RPM_BUILD_ROOT%{embed_path}/static/$i
+	ln -sf editor.sh $RPM_BUILD_ROOT%{embed_path}/shared/$i
 done
 
 %clean
