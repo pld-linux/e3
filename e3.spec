@@ -30,6 +30,9 @@ e3 for bootdisk.
 
 %prep
 %setup  -q
+# gzexe makes problems
+# we gain 3K only
+perl -pi -e 's/^.*gzexe e3.*$//' Makefile
 
 %build
 %{__make}
