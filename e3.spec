@@ -5,22 +5,28 @@ Version:	1.51
 Release:	1
 License:	GPL
 Group:		Applications/Editors
+Group(de):	Applikationen/Editors
+Group(pl):	Aplikacje/Edytory
+Group(pt):	Aplicações/Editores
 Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
-Source1:	e3-editor.sh
-BuildRequires:	nasm
+Source1:	%{name}-editor.sh
 URL:		http://www.sax.de/~adlibit/
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRequires:	nasm
 ExclusiveArch:	%{ix86}
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Small bootloader
+Tiny edytor.
 
 %package BOOT
 Summary:	e3 for bootdisk
 Group:		Applications/Editors
+Group(de):	Applikationen/Editors
+Group(pl):	Aplikacje/Edytory
+Group(pt):	Aplicações/Editores
 
 %description BOOT
-
+e3 for bootdisk.
 
 %prep
 %setup  -q
@@ -30,19 +36,20 @@ Group:		Applications/Editors
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_mandir}/man1
+install -d $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin \
+	$RPM_BUILD_ROOT%{_bindir},%{_mandir}/man1}
+
 install e3 $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin
 install %{SOURCE1} $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin/editor.sh
 install e3.man $RPM_BUILD_ROOT%{_mandir}/man1/e3.1
+
 for i in ws em pi vi ne; do \
-ln -sf e3 $RPM_BUILD_ROOT%{_bindir}/e3${i}; \
-ln -sf e3 $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin/e3${i}; \
+	ln -sf e3 $RPM_BUILD_ROOT%{_bindir}/e3${i}; \
+	ln -sf e3 $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin/e3${i}; \
 done
 
 for i in emacs vi pico ne ws; do \
-ln -sf editor.sh $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin/$i; \
+	ln -sf editor.sh $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin/$i; \
 done
 
 %clean
