@@ -1,4 +1,4 @@
-Summary:	Tiny edytor
+Summary:	Tiny editor
 Summary(pl):	Mikroedytorek
 Name:		e3
 Version:	1.61
@@ -17,7 +17,23 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define no_install_post_strip 1
 
 %description
-Tiny edytor.
+e3 is a text micro editor with a code size less than 10000 bytes.
+Except for 'undo' and 'syntax highlighting', e3 supports all of the
+basic functions one expects. If you have installed the stream editor
+'sed' or 'ex' you can use these tools as sub-processes, getting the
+full power of regular expressions.  e3 can use Wordstar-, EMACS-,
+Pico, Nedit or vi-like key bindings, whichever the user chooses.
+e3 is designed to be INDEPENDENT OF LIBC OR ANY OTHER library.
+
+%description -l pl
+e3 jest mikroskopijnym wrêcz edytorem tekstu, jego rozmiar nie
+przekracza 10000 bajtów. Wspiera on wszystkie podstawowe funkcje,
+jakich mo¿na oczekiwaæ od edytora, z wyj±tkiem pod¶wietlania sk³adni
+i cofania dokonanych zmian (undo). Jesli chcesz skorzystaæ z potêgi
+wyra¿eñ regularnych, to e3 mo¿e wywo³aæ zewnêtrzny edytor strumieni
+('sed' lub 'ex'). e3 potrafi emulowaæ ustawienia klawiszy Wordstara,
+EMACSA, Pico, Nedit oraz vi. e3 nie jest zale¿ny od ¿adnej biblioteki
+(wliczaj±c glibc).
 
 %package BOOT
 Summary:	e3 for bootdisk
