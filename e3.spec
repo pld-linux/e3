@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
+# Source0-md5:	d053f6f6bfc4619a5a3a147a498e22a2
 Source1:	%{name}-editor.sh
 URL:		http://www.sax.de/~adlibit/
 %ifarch %{ix86}
