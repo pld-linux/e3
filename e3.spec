@@ -7,7 +7,6 @@ License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
 Source1:	e3-editor.sh
-Patch0:		%{name}-makefile.patch
 URL:		http://www.sax.de/~adlibit/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ExclusiveArch:	%{ix86}
@@ -24,7 +23,6 @@ Group:		Applications/Editors
 
 %prep
 %setup  -q
-%patch0
 
 %build
 %{__make}
