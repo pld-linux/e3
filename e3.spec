@@ -1,14 +1,12 @@
 Summary:	Tiny editor
 Summary(pl):	Mikroedytorek
 Name:		e3
-Version:	1.61
-Release:	6
+Version:	2.33
+Release:	1
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
 Source1:	%{name}-editor.sh
-Patch0:		%{name}-short_jump.patch
-Patch1:		%{name}-%{version}-Polish_letters.patch
 URL:		http://www.sax.de/~adlibit/
 BuildRequires:	perl
 %ifarch %{ix86}
@@ -39,8 +37,7 @@ EMACSA, Pico, Nedit oraz vi. e3 nie jest zale¿ny od ¿adnej biblioteki
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+
 # gzexe makes problems
 # we gain 3K only
 perl -pi -e 's/^.*gzexe e3.*$//' Makefile
@@ -76,11 +73,13 @@ for i in emacs vi pico ne ws; do
 	ln -sf e3-editor.sh $RPM_BUILD_ROOT%{_bindir}/e3-$i
 done
 
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
+%doc ChangeLog README
 %{_mandir}/man1/*
 %{_libdir}/*
