@@ -32,7 +32,7 @@ e3 is a text micro editor with a code size less than 10000 bytes.
 Except for 'undo' and 'syntax highlighting', e3 supports all of the
 basic functions one expects. If you have installed the stream editor
 'sed' or 'ex' you can use these tools as sub-processes, getting the
-full power of regular expressions.  e3 can use Wordstar-, EMACS-,
+full power of regular expressions. e3 can use Wordstar-, EMACS-,
 Pico, Nedit or vi-like key bindings, whichever the user chooses.
 e3 is designed to be INDEPENDENT OF LIBC OR ANY OTHER library.
 
@@ -48,6 +48,7 @@ EMACSA, Pico, Nedit oraz vi. e3 nie jest zale¿ny od ¿adnej biblioteki
 
 %package embed
 Summary:	e3 for bootdisk
+Summary(pl):	e3 na bootkietkê
 Group:		Applications/Editors
 Group(de):	Applikationen/Editors
 Group(pl):	Aplikacje/Edytory
@@ -55,6 +56,9 @@ Group(pt):	Aplicações/Editores
 
 %description embed
 e3 for bootdisk.
+
+%description embed -l pl
+e3 na bootkietkê.
 
 %prep
 %setup -q
