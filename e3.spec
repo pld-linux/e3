@@ -1,5 +1,5 @@
 Summary:	Tiny editor
-Summary(pl.UTF-8):   Mikroedytorek
+Summary(pl.UTF-8):	Mikroedytorek
 Name:		e3
 Version:	2.43
 Release:	1
