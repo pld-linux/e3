@@ -1,5 +1,5 @@
 Summary:	Tiny editor
-Summary(pl):	Mikroedytorek
+Summary(pl.UTF-8):   Mikroedytorek
 Name:		e3
 Version:	2.43
 Release:	1
@@ -27,15 +27,15 @@ full power of regular expressions. e3 can use Wordstar-, EMACS-, Pico,
 Nedit or vi-like key bindings, whichever the user chooses. e3 is
 designed to be INDEPENDENT OF LIBC OR ANY OTHER library.
 
-%description -l pl
-e3 jest mikroskopijnym wrêcz edytorem tekstu, jego rozmiar nie
-przekracza 10000 bajtów. Wspiera on wszystkie podstawowe funkcje,
-jakich mo¿na oczekiwaæ od edytora, z wyj±tkiem pod¶wietlania sk³adni 
-i cofania dokonanych zmian (undo). Je¶li chcesz skorzystaæ z potêgi
-wyra¿eñ regularnych, to e3 mo¿e wywo³aæ zewnêtrzny edytor strumieni
-('sed' lub 'ex'). e3 potrafi emulowaæ ustawienia klawiszy Wordstara,
-EMACSA, Pico, Nedit oraz vi. e3 nie jest zale¿ny od ¿adnej biblioteki
-(wliczaj±c glibc).
+%description -l pl.UTF-8
+e3 jest mikroskopijnym wrÄ™cz edytorem tekstu, jego rozmiar nie
+przekracza 10000 bajtÃ³w. Wspiera on wszystkie podstawowe funkcje,
+jakich moÅ¼na oczekiwaÄ‡ od edytora, z wyjÄ…tkiem podÅ›wietlania skÅ‚adni 
+i cofania dokonanych zmian (undo). JeÅ›li chcesz skorzystaÄ‡ z potÄ™gi
+wyraÅ¼eÅ„ regularnych, to e3 moÅ¼e wywoÅ‚aÄ‡ zewnÄ™trzny edytor strumieni
+('sed' lub 'ex'). e3 potrafi emulowaÄ‡ ustawienia klawiszy Wordstara,
+EMACSA, Pico, Nedit oraz vi. e3 nie jest zaleÅ¼ny od Å¼adnej biblioteki
+(wliczajÄ…c glibc).
 
 %prep
 %setup -q
