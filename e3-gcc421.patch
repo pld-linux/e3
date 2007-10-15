@@ -1,0 +1,20 @@
+--- e3-2.43/e3c/e3.c.old	2007-10-15 19:00:14.000000000 +0200
++++ e3-2.43/e3c/e3.c	2007-10-15 19:04:15.000000000 +0200
+@@ -224,7 +224,7 @@ long stack[100];
+ #define RETURN	goto *(*esp--)
+ #define CALL(calladr,retadr) *++esp=(long)&&_loc##retadr; goto calladr; _loc##retadr:
+ #define PUSH(arg) *++esp=arg
+-#define POP(arg) (long*)arg=*esp--
++#define POP(arg) arg=*esp--
+ 
+ int main(int argc,char**argv,char **envp)
+ {
+@@ -1296,7 +1296,7 @@ SpaceAva:PUSH(edi);
+ Ins0:	POP(edi);			// here is the jmp destination from DeleteByte
+ //------
+ 	changed = CHANGED;
+-	(long)ebp+=eax;
++	ebp+=eax;
+ 	if ((unsigned long)edi>=(unsigned long)blockende) goto Ins1;
+ 	blockende+=eax;
+ Ins1:	if ((unsigned long)edi>=(unsigned long)blockbegin) goto Ins2;
