@@ -8,6 +8,7 @@ Group:		Applications/Editors
 Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
 # Source0-md5:	d053f6f6bfc4619a5a3a147a498e22a2
 Source1:	%{name}-editor.sh
+Patch0:		%{name}-gcc421.patch
 URL:		http://www.sax.de/~adlibit/
 %ifarch %{ix86}
 BuildRequires:	nasm
@@ -39,6 +40,7 @@ EMACSA, Pico, Nedit oraz vi. e3 nie jest zależny od żadnej biblioteki
 
 %prep
 %setup -q
+%patch0 -p1
 
 # gzexe makes problems
 # we gain 3K only
@@ -83,4 +85,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %doc ChangeLog README
 %{_mandir}/man1/*
-%{_libdir}/*
+%{_libdir}/*.hlp
+%{_libdir}/*.res
