@@ -1,12 +1,13 @@
 Summary:	Tiny editor
 Summary(pl.UTF-8):	Mikroedytorek
 Name:		e3
-Version:	2.43
+Version:	2.7.0
 Release:	1
+Epoch:		1
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
-# Source0-md5:	d053f6f6bfc4619a5a3a147a498e22a2
+# Source0-md5:	a76dd61c52a80a1f4d3938a4ce54c62e
 Source1:	%{name}-editor.sh
 Patch0:		%{name}-gcc421.patch
 URL:		http://www.sax.de/~adlibit/
@@ -17,7 +18,7 @@ BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		no_install_post_strip 1
-%define		_use_internal_dependency_generator 0
+#%%define		_use_internal_dependency_generator 0
 
 %description
 e3 is a text micro editor with a code size less than 10000 bytes.
