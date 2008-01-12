@@ -4,7 +4,7 @@ Name:		e3
 Version:	2.7.0
 Release:	1
 Epoch:		1
-License:	GPL
+License:	GPL v2
 Group:		Applications/Editors
 Source0:	http://www.sax.de/~adlibit/%{name}-%{version}.tar.gz
 # Source0-md5:	a76dd61c52a80a1f4d3938a4ce54c62e
@@ -15,10 +15,12 @@ URL:		http://www.sax.de/~adlibit/
 BuildRequires:	nasm
 %endif
 BuildRequires:	perl-base
+%ifarch %{x8664}
+BuildRequires:	yasm
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		no_install_post_strip 1
-#%%define		_use_internal_dependency_generator 0
+%define		no_install_post_strip	1
 
 %description
 e3 is a text micro editor with a code size less than 10000 bytes.
@@ -43,20 +45,20 @@ EMACSA, Pico, Nedit oraz vi. e3 nie jest zależny od żadnej biblioteki
 %setup -q
 %patch0 -p1
 
-# gzexe makes problems
-# we gain 3K only
-perl -pi -e 's/^.*gzexe e3.*$//' Makefile
-
 %build
 %ifarch %{ix86}
 %{__make}
+%endif
+%ifarch %{x8664}
+%{__make} yasm64 \
+	AFLAGS=-
 %endif
 %{__cc} %{rpmcflags} %{rpmldflags} -DLIBDIR=\"%{_libdir}\" e3c/e3.c -o e3c.bin
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}}
-%ifarch %{ix86}
+%ifarch %{ix86} %{x8664}
 install e3 $RPM_BUILD_ROOT%{_bindir}/e3
 %else
 ln -sf e3c $RPM_BUILD_ROOT%{_bindir}/e3
@@ -83,8 +85,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
-%doc ChangeLog README
-%{_mandir}/man1/*
+%doc COPYRIGHT ChangeLog README
+%attr(755,root,root) %{_bindir}/e3*
+%{_mandir}/man1/e3*.1*
 %{_libdir}/*.hlp
 %{_libdir}/*.res
