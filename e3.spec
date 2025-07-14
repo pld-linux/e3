@@ -43,7 +43,7 @@ EMACSA, Pico, Nedit oraz vi. e3 nie jest zależny od żadnej biblioteki
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %ifarch %{ix86}
